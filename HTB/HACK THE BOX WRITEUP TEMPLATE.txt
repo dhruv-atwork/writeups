@@ -1,0 +1,107 @@
+HACK THE BOX WRITEUP TEMPLATE
+
+
+===============================
+MACHINE NAME: 
+DATE: 
+DIFFICULTY: 
+PLATFORM: Hack The Box
+===============================
+
+1. TARGET INFORMATION
+-------------------------------
+Target IP: 
+Machine Name: 
+
+2. RECONNAISSANCE (Nmap Scan)
+-------------------------------
+Command Used:
+nmap -sC -sV -p- <IP>
+
+Findings:
+- Open Ports:
+- Services:
+- Versions:
+
+Analysis:
+(What do these services mean? Which looks vulnerable?)
+
+3. ENUMERATION
+-------------------------------
+Steps Taken:
+
+- Web Enumeration:
+  (directories, login pages, technologies)
+
+- Service Enumeration:
+  (SMB, FTP, SSH, etc.)
+
+Commands Used:
+- gobuster / feroxbuster
+- smbclient
+- ftp
+
+Findings:
+(Interesting files, credentials, endpoints)
+
+4. VULNERABILITY IDENTIFICATION
+-------------------------------
+Vulnerability Found:
+(Example: SMB vulnerability / SQL Injection / Weak credentials)
+
+How Discovered:
+(Explain logic — not just result)
+
+5. EXPLOITATION (INITIAL ACCESS)
+-------------------------------
+Method Used:
+(Manual / Metasploit / Script)
+
+Steps:
+1.
+2.
+3.
+
+Result:
+(How you got shell/access)
+
+Shell Type:
+(reverse shell / meterpreter / basic shell)
+
+6. PRIVILEGE ESCALATION
+-------------------------------
+Enumeration:
+- sudo -l
+- SUID files
+- cron jobs
+- writable files
+
+Technique Used:
+(Explain vulnerability)
+
+Steps:
+1.
+2.
+3.
+
+Result:
+(Root / Administrator access)
+
+7. POST-EXPLOITATION
+-------------------------------
+- Flags captured:
+- Sensitive files found:
+
+8. KEY LEARNINGS
+-------------------------------
+- What new concept you learned
+- What mistake you made
+- What you would do faster next time
+
+9. COMMAND SUMMARY
+-------------------------------
+(List important commands used)
+
+10. REFERENCES (if used)
+-------------------------------
+(Links or resources you referred to)

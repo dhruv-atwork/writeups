@@ -1,0 +1,69 @@
+TRYHACKME WRITEUP TEMPLATE
+
+===============================
+ROOM NAME:
+DATE:
+PLATFORM: TryHackMe
+===============================
+
+1. TOPIC OVERVIEW
+-------------------------------
+(What is this room about?)
+
+Example:
+This room covers Nmap scanning and service enumeration.
+
+2. KEY CONCEPTS
+-------------------------------
+- Concept 1:
+- Concept 2:
+- Concept 3:
+
+(Explain in simple words)
+
+3. IMPORTANT COMMANDS
+-------------------------------
+Command:
+nmap -sC -sV <IP>
+
+Explanation:
+- -sC → default scripts
+- -sV → version detection
+
+Example Output:
+(What does output mean?)
+
+4. PRACTICAL TASKS
+-------------------------------
+What you did:
+
+1.
+2.
+3.
+
+Tools Used:
+- Nmap
+- Burp Suite
+- etc.
+
+5. ATTACK FLOW (IF APPLICABLE)
+-------------------------------
+Step-by-step:
+
+1. Scan target
+2. Identify service
+3. Exploit vulnerability
+
+6. MISTAKES / CONFUSIONS
+-------------------------------
+- What confused you
+- What you got wrong initially
+
+7. KEY LEARNINGS
+-------------------------------
+- What you learned
+- When to use this in real scenarios
+
+8. QUICK NOTES (REVISION)
+-------------------------------
+- Short bullet points for future revision
