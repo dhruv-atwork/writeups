@@ -37,8 +37,9 @@ nmap -sn <target>
 **Explanation:**
 
 * sn --> Ping Scan (-sP in past)
-  Standard,Fast Nmap Scan without involving ports
-  Can be used with Both CIDR(0/24)[Includes .0 and .255] and Octet Range Addressing(1-254)[Skips .0 and .255]
+  
+Standard, fast Nmap Scan without involving ports.
+Can be used with Both CIDR(0/24) [Includes .0 and .255] and Octet Range Addressing(1-254) [Skips .0 and .255]
   In this scan, nmap pings every host with ICMP + ARP(if locally on network) + (TCP/ACK) packet. If on a local network, ARP requests are sent.
 
 ---
