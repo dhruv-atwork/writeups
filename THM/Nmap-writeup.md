@@ -42,6 +42,10 @@ Standard, fast Nmap Scan without involving ports.
 Can be used with Both CIDR(0/24) [Includes .0 and .255] and Octet Range Addressing(1-254) [Skips .0 and .255]
   In this scan, nmap pings every host with ICMP / ARP(if locally on network) / (TCP/ACK) packet.
 
+**Example Output:**
+<img width="537" height="144" alt="image" src="https://github.com/user-attachments/assets/a3d86a10-681e-4ab7-8ae2-ef5da95f37b6" />
+
+
 ---
 
 ### Command:
@@ -52,6 +56,9 @@ nmap -sT <target>
 
 **Explanation:**
 The standard TCP connect Scan. If the port's open, it'll respond with SYN-ACK. After the 3 Way Handshake is done, the Target must send RST packet to end the Communication. But it's worth it to note that an RST packet will be sent if the port is closed before handshake is completed.
+
+**Example Output:**
+<img width="522" height="198" alt="image" src="https://github.com/user-attachments/assets/c4faf467-d042-47b6-8ee6-71a09f8fe2c4" />
 
 ---
 
@@ -67,7 +74,8 @@ Though modern firewalls can prevent these scans and send back RST flag.
 If no response is received, port is filtered.
 
 **Example Output:**
-Screenshot
+<img width="525" height="189" alt="image" src="https://github.com/user-attachments/assets/bf3893c0-4300-4e6c-832d-bf999d6194c5" />
+
 
 ---
 
@@ -84,7 +92,8 @@ If a UDP response is received(very unusual), then the port is surely open. If no
 Very Slow Scan. Hence, only top ports are scanned using --top-ports <number>
 
 **Example Output:**
-Screenshot
+<img width="528" height="189" alt="image" src="https://github.com/user-attachments/assets/61534d57-ffae-4f83-aa4a-64ef5d2e2c4f" />
+
 
 ---
 
@@ -99,7 +108,8 @@ This command scans the port number 21 of the target to check if the service allo
 This command shows scripting in Nmap using NSE.
 
 **Example Output:**
-Screenshot
+<img width="543" height="201" alt="image" src="https://github.com/user-attachments/assets/fe3b9b88-64db-41dc-b250-d9b0c254ebb1" />
+
 
 ---
 
