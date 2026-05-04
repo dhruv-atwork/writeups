@@ -43,6 +43,7 @@ Can be used with Both CIDR(0/24) [Includes .0 and .255] and Octet Range Addressi
   In this scan, nmap pings every host with ICMP / ARP(if locally on network) / (TCP/ACK) packet.
 
 **Example Output:**
+
 <img width="537" height="144" alt="image" src="https://github.com/user-attachments/assets/a3d86a10-681e-4ab7-8ae2-ef5da95f37b6" />
 
 
@@ -58,6 +59,7 @@ nmap -sT <target>
 The standard TCP connect Scan. If the port's open, it'll respond with SYN-ACK. After the 3 Way Handshake is done, the Target must send RST packet to end the Communication. But it's worth it to note that an RST packet will be sent if the port is closed before handshake is completed.
 
 **Example Output:**
+
 <img width="522" height="198" alt="image" src="https://github.com/user-attachments/assets/c4faf467-d042-47b6-8ee6-71a09f8fe2c4" />
 
 ---
@@ -74,6 +76,7 @@ Though modern firewalls can prevent these scans and send back RST flag.
 If no response is received, port is filtered.
 
 **Example Output:**
+
 <img width="525" height="189" alt="image" src="https://github.com/user-attachments/assets/bf3893c0-4300-4e6c-832d-bf999d6194c5" />
 
 
@@ -92,6 +95,7 @@ If a UDP response is received(very unusual), then the port is surely open. If no
 Very Slow Scan. Hence, only top ports are scanned using --top-ports <number>
 
 **Example Output:**
+
 <img width="528" height="189" alt="image" src="https://github.com/user-attachments/assets/61534d57-ffae-4f83-aa4a-64ef5d2e2c4f" />
 
 
@@ -108,6 +112,7 @@ This command scans the port number 21 of the target to check if the service allo
 This command shows scripting in Nmap using NSE.
 
 **Example Output:**
+
 <img width="543" height="201" alt="image" src="https://github.com/user-attachments/assets/fe3b9b88-64db-41dc-b250-d9b0c254ebb1" />
 
 
@@ -135,13 +140,30 @@ This command shows scripting in Nmap using NSE.
 
 1. Pinged Target with an ICMP + ARP(if localhost) + (TCP/ACK) packets. This step was very important to know if host is up. 1 Host was Up
 
-Attach Screenshot Of the Scan
+
+<img width="516" height="140" alt="image" src="https://github.com/user-attachments/assets/e5fc93ae-ad95-454a-b9fb-596e84f2608c" />
+
 
 2. An Xmas Scan (using -sX) on the first 999 ports. All the ports were open|filtered
 
+<img width="535" height="187" alt="image" src="https://github.com/user-attachments/assets/766c04ae-510d-4314-976e-7cf842af1abd" />
+
+
 3. TCP SYN Scan on the first 5000 Ports (using -sS). 5 Ports were meant to be open. But in this scenario, the attack machine shows all filtered.
 
-4. Scanned Port 21 using ftp-anon.nse in nmap while closely monitoring the traffic using Wireshark. The communication with Port 21 failed repeatedly even though the anonymous login should've been possible as the room suggests.
+<img width="531" height="177" alt="image" src="https://github.com/user-attachments/assets/3e363035-b707-46c1-8174-69783bc12ab5" />
+
+4. Scanned Port 21 using ftp-anon.nse in nmap while closely monitoring the traffic using Wireshark. The communication with Port 21 gave [RST,ACK] package, i.e. the service allowed anonymous logins.
+
+Nmap:
+
+<img width="544" height="201" alt="image" src="https://github.com/user-attachments/assets/053ada6b-c377-4af9-b910-e6017ccca629" />
+
+Wireshark:
+
+<img width="1365" height="309" alt="image" src="https://github.com/user-attachments/assets/2ef1963b-45d0-44b3-85c5-524f0d15a85e" />
+
+
 
 ---
 
@@ -168,7 +190,7 @@ Attach Screenshot Of the Scan
 
 * There was confusion between TCP Syn Scan and ICMP Scan as both their switches were similar (-sS and -sn) even though both of the scans are very different.
 
-* The Target machine was not showing Open ports as specified in the documentation given my TryHackMe, but the conclusion was it was showing Open|Filtered.
+* The Target machine was not showing Open ports as specified in the documentation given my TryHackMe, but the conclusion was it was showing Open|Filtered. This shows on modern systems, the fundamental scans are bypassed. But we can still Monitor the flags using BurpSuite. 
 
 * Initially, my mindset revolved around Nmap --> Attack Tool. The room cleared the use case of Nmap is not attack, it's Reconnaissance.
 
